@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D1154F8211A23A300583898 /* PassengersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1154F7211A23A300583898 /* PassengersViewController.swift */; };
+		9D1154FA211A23C000583898 /* PassengerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1154F9211A23C000583898 /* PassengerPresenter.swift */; };
+		9D1154FC211A253000583898 /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1154FB211A253000583898 /* Passenger.swift */; };
+		9D1154FF211A293E00583898 /* PassengerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1154FE211A293E00583898 /* PassengerCell.swift */; };
 		9D963C47211A1AF600AC8A6B /* LiveLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D963C46211A1AF600AC8A6B /* LiveLocationViewController.swift */; };
 		9D963C4A211A1F3500AC8A6B /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D963C49211A1F3400AC8A6B /* Position.swift */; };
 		9D963C4C211A1FBE00AC8A6B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D963C4B211A1FBE00AC8A6B /* APIManager.swift */; };
@@ -37,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D1154F7211A23A300583898 /* PassengersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengersViewController.swift; sourceTree = "<group>"; };
+		9D1154F9211A23C000583898 /* PassengerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerPresenter.swift; sourceTree = "<group>"; };
+		9D1154FB211A253000583898 /* Passenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passenger.swift; sourceTree = "<group>"; };
+		9D1154FE211A293E00583898 /* PassengerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerCell.swift; sourceTree = "<group>"; };
 		9D963C46211A1AF600AC8A6B /* LiveLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveLocationViewController.swift; sourceTree = "<group>"; };
 		9D963C49211A1F3400AC8A6B /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		9D963C4B211A1FBE00AC8A6B /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -80,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D1154FD211A292500583898 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				9D1154FE211A293E00583898 /* PassengerCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		9D963C3F211A189400AC8A6B /* Live location */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +107,9 @@
 		9D963C40211A18A000AC8A6B /* Passengers */ = {
 			isa = PBXGroup;
 			children = (
+				9D1154FD211A292500583898 /* cell */,
+				9D1154F7211A23A300583898 /* PassengersViewController.swift */,
+				9D1154F9211A23C000583898 /* PassengerPresenter.swift */,
 			);
 			path = Passengers;
 			sourceTree = "<group>";
@@ -136,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				9D963C49211A1F3400AC8A6B /* Position.swift */,
+				9D1154FB211A253000583898 /* Passenger.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -330,7 +350,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DCB1634211A15CB00848151 /* MainViewController.swift in Sources */,
+				9D1154F8211A23A300583898 /* PassengersViewController.swift in Sources */,
+				9D1154FC211A253000583898 /* Passenger.swift in Sources */,
 				9DCB1632211A15CB00848151 /* AppDelegate.swift in Sources */,
+				9D1154FF211A293E00583898 /* PassengerCell.swift in Sources */,
+				9D1154FA211A23C000583898 /* PassengerPresenter.swift in Sources */,
 				9D963C4C211A1FBE00AC8A6B /* APIManager.swift in Sources */,
 				9D963C4A211A1F3500AC8A6B /* Position.swift in Sources */,
 				9D963C47211A1AF600AC8A6B /* LiveLocationViewController.swift in Sources */,
