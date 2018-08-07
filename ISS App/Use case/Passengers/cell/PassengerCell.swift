@@ -19,5 +19,9 @@ class PassengerCell: UITableViewCell {
     func configure(people: People) {
         nameLabel.text = people.name
     }
+    
+    func configure(name: String) {
+        nameLabel.text = name
+    }
 
 }

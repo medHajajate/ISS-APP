@@ -19,6 +19,8 @@ class PassengerPresenter {
     
     var view: PassengersViewControllerInput?
     
+
+    
     private var peoples: [People] = []
     
     init(delegate: PassengersViewControllerInput) {

@@ -13,13 +13,13 @@ class LiveLocationViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
 
-    
+    var timer = Timer()
     let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getISSPostion()
+        getISSLoaction()
     }
     
     func ShowPostionISS(latitude: String, longitude: String) {
@@ -34,22 +34,25 @@ class LiveLocationViewController: UIViewController {
         
         let annotation = MKPointAnnotation()
         annotation.coordinate = location
-        annotation.title = "Big Ben"
-        annotation.subtitle = "London"
         mapView.addAnnotation(annotation)
     }
     
-    func getISSPostion() {
+    @objc func getISSPostion() {
         
         APIManager.sharedInstance.getISSPosition(onSuccess: { issPosition in
             print("\(issPosition)")
             self.ShowPostionISS(latitude: (issPosition.position?.latitude)!, longitude: (issPosition.position?.longitude)!)
+            NotificationCenter.default.post(name: Notification.Name("notifyUser"), object: nil, userInfo: ["location": issPosition.position])
         },onFailure: { error in
             let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
             self.show(alert, sender: nil)
         })
         
+    }
+    
+    func getISSLoaction(){
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(getISSPostion), userInfo: nil, repeats: true)
     }
     
     

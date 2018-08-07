@@ -11,6 +11,10 @@
 		9D1154FA211A23C000583898 /* PassengerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1154F9211A23C000583898 /* PassengerPresenter.swift */; };
 		9D1154FC211A253000583898 /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1154FB211A253000583898 /* Passenger.swift */; };
 		9D1154FF211A293E00583898 /* PassengerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1154FE211A293E00583898 /* PassengerCell.swift */; };
+		9D115501211A2BB800583898 /* UerLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D115500211A2BB800583898 /* UerLocationViewController.swift */; };
+		9D115504211A2D4F00583898 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D115503211A2D4F00583898 /* UserLocation.swift */; };
+		9D115506211A382F00583898 /* PassTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D115505211A382F00583898 /* PassTimeViewController.swift */; };
+		9D115508211A396A00583898 /* PassTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D115507211A396A00583898 /* PassTime.swift */; };
 		9D963C47211A1AF600AC8A6B /* LiveLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D963C46211A1AF600AC8A6B /* LiveLocationViewController.swift */; };
 		9D963C4A211A1F3500AC8A6B /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D963C49211A1F3400AC8A6B /* Position.swift */; };
 		9D963C4C211A1FBE00AC8A6B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D963C4B211A1FBE00AC8A6B /* APIManager.swift */; };
@@ -45,6 +49,10 @@
 		9D1154F9211A23C000583898 /* PassengerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerPresenter.swift; sourceTree = "<group>"; };
 		9D1154FB211A253000583898 /* Passenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passenger.swift; sourceTree = "<group>"; };
 		9D1154FE211A293E00583898 /* PassengerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerCell.swift; sourceTree = "<group>"; };
+		9D115500211A2BB800583898 /* UerLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UerLocationViewController.swift; sourceTree = "<group>"; };
+		9D115503211A2D4F00583898 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		9D115505211A382F00583898 /* PassTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassTimeViewController.swift; sourceTree = "<group>"; };
+		9D115507211A396A00583898 /* PassTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassTime.swift; sourceTree = "<group>"; };
 		9D963C46211A1AF600AC8A6B /* LiveLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveLocationViewController.swift; sourceTree = "<group>"; };
 		9D963C49211A1F3400AC8A6B /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		9D963C4B211A1FBE00AC8A6B /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -96,6 +104,14 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		9D115502211A2D3200583898 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				9D115503211A2D4F00583898 /* UserLocation.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		9D963C3F211A189400AC8A6B /* Live location */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +146,7 @@
 		9D963C42211A18CF00AC8A6B /* User location */ = {
 			isa = PBXGroup;
 			children = (
+				9D115500211A2BB800583898 /* UerLocationViewController.swift */,
 			);
 			path = "User location";
 			sourceTree = "<group>";
@@ -137,6 +154,7 @@
 		9D963C43211A18E600AC8A6B /* Pass Times */ = {
 			isa = PBXGroup;
 			children = (
+				9D115505211A382F00583898 /* PassTimeViewController.swift */,
 			);
 			path = "Pass Times";
 			sourceTree = "<group>";
@@ -156,6 +174,7 @@
 			children = (
 				9D963C49211A1F3400AC8A6B /* Position.swift */,
 				9D1154FB211A253000583898 /* Passenger.swift */,
+				9D115507211A396A00583898 /* PassTime.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,6 +210,7 @@
 		9DCB1630211A15CB00848151 /* ISS App */ = {
 			isa = PBXGroup;
 			children = (
+				9D115502211A2D3200583898 /* Shared */,
 				9D963C41211A18BD00AC8A6B /* Use case */,
 				9D963C45211A192F00AC8A6B /* Model */,
 				9D963C48211A1F1100AC8A6B /* API Manager */,
@@ -349,11 +369,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D115506211A382F00583898 /* PassTimeViewController.swift in Sources */,
+				9D115501211A2BB800583898 /* UerLocationViewController.swift in Sources */,
 				9DCB1634211A15CB00848151 /* MainViewController.swift in Sources */,
 				9D1154F8211A23A300583898 /* PassengersViewController.swift in Sources */,
 				9D1154FC211A253000583898 /* Passenger.swift in Sources */,
 				9DCB1632211A15CB00848151 /* AppDelegate.swift in Sources */,
+				9D115508211A396A00583898 /* PassTime.swift in Sources */,
 				9D1154FF211A293E00583898 /* PassengerCell.swift in Sources */,
+				9D115504211A2D4F00583898 /* UserLocation.swift in Sources */,
 				9D1154FA211A23C000583898 /* PassengerPresenter.swift in Sources */,
 				9D963C4C211A1FBE00AC8A6B /* APIManager.swift in Sources */,
 				9D963C4A211A1F3500AC8A6B /* Position.swift in Sources */,
