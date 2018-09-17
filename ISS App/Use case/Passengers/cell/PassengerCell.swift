@@ -20,8 +20,8 @@ class PassengerCell: UITableViewCell {
         nameLabel.text = people.name
     }
     
-    func configure(name: String) {
-        nameLabel.text = name
+    func configure(passTime: PassTime) {
+        nameLabel.text = passTime.time//String(time)
     }
 
 }

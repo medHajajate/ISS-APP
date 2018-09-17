@@ -10,8 +10,13 @@ import Foundation
 
 
 struct PassTime: Codable {
-    var duration: Int?
-    var risetime: Int?
+    var duration: Double?
+    var risetime: Double?
+    
+    var time: String {
+        let date = Date(timeIntervalSince1970: risetime!)
+        return date.debugDescription
+    }
 }
 
 struct CALLBACK: Codable {

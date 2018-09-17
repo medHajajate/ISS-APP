@@ -18,6 +18,9 @@
 		9D963C47211A1AF600AC8A6B /* LiveLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D963C46211A1AF600AC8A6B /* LiveLocationViewController.swift */; };
 		9D963C4A211A1F3500AC8A6B /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D963C49211A1F3400AC8A6B /* Position.swift */; };
 		9D963C4C211A1FBE00AC8A6B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D963C4B211A1FBE00AC8A6B /* APIManager.swift */; };
+		9D96BC202120546600489043 /* UIImageView + UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96BC1F2120546600489043 /* UIImageView + UIImage.swift */; };
+		9D96BC222120632300489043 /* Looking.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9D96BC212120632300489043 /* Looking.gif */; };
+		9D96BC242120F6F000489043 /* foundISS.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9D96BC232120F6EF00489043 /* foundISS.gif */; };
 		9DCB1632211A15CB00848151 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB1631211A15CB00848151 /* AppDelegate.swift */; };
 		9DCB1634211A15CB00848151 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB1633211A15CB00848151 /* MainViewController.swift */; };
 		9DCB1637211A15CB00848151 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DCB1635211A15CB00848151 /* Main.storyboard */; };
@@ -25,6 +28,7 @@
 		9DCB163C211A15CD00848151 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DCB163A211A15CD00848151 /* LaunchScreen.storyboard */; };
 		9DCB1647211A15CD00848151 /* ISS_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB1646211A15CD00848151 /* ISS_AppTests.swift */; };
 		9DCB1652211A15CD00848151 /* ISS_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB1651211A15CD00848151 /* ISS_AppUITests.swift */; };
+		9DE1E0522123127200843FE3 /* UIViewController + Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE1E0512123127200843FE3 /* UIViewController + Addition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,9 @@
 		9D963C46211A1AF600AC8A6B /* LiveLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveLocationViewController.swift; sourceTree = "<group>"; };
 		9D963C49211A1F3400AC8A6B /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		9D963C4B211A1FBE00AC8A6B /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		9D96BC1F2120546600489043 /* UIImageView + UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + UIImage.swift"; sourceTree = "<group>"; };
+		9D96BC212120632300489043 /* Looking.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Looking.gif; sourceTree = "<group>"; };
+		9D96BC232120F6EF00489043 /* foundISS.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = foundISS.gif; sourceTree = "<group>"; };
 		9DCB162E211A15CB00848151 /* ISS App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ISS App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DCB1631211A15CB00848151 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DCB1633211A15CB00848151 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +76,7 @@
 		9DCB164D211A15CD00848151 /* ISS AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ISS AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DCB1651211A15CD00848151 /* ISS_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISS_AppUITests.swift; sourceTree = "<group>"; };
 		9DCB1653211A15CD00848151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DE1E0512123127200843FE3 /* UIViewController + Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Addition.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,9 +170,13 @@
 		9D963C44211A18F200AC8A6B /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				9D96BC212120632300489043 /* Looking.gif */,
+				9D96BC232120F6EF00489043 /* foundISS.gif */,
 				9DCB1631211A15CB00848151 /* AppDelegate.swift */,
 				9DCB163A211A15CD00848151 /* LaunchScreen.storyboard */,
 				9DCB1638211A15CD00848151 /* Assets.xcassets */,
+				9D96BC1F2120546600489043 /* UIImageView + UIImage.swift */,
+				9DE1E0512123127200843FE3 /* UIViewController + Addition.swift */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -343,7 +355,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DCB163C211A15CD00848151 /* LaunchScreen.storyboard in Resources */,
+				9D96BC242120F6F000489043 /* foundISS.gif in Resources */,
 				9DCB1639211A15CD00848151 /* Assets.xcassets in Resources */,
+				9D96BC222120632300489043 /* Looking.gif in Resources */,
 				9DCB1637211A15CB00848151 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D115506211A382F00583898 /* PassTimeViewController.swift in Sources */,
+				9D96BC202120546600489043 /* UIImageView + UIImage.swift in Sources */,
 				9D115501211A2BB800583898 /* UerLocationViewController.swift in Sources */,
 				9DCB1634211A15CB00848151 /* MainViewController.swift in Sources */,
 				9D1154F8211A23A300583898 /* PassengersViewController.swift in Sources */,
@@ -382,6 +397,7 @@
 				9D963C4C211A1FBE00AC8A6B /* APIManager.swift in Sources */,
 				9D963C4A211A1F3500AC8A6B /* Position.swift in Sources */,
 				9D963C47211A1AF600AC8A6B /* LiveLocationViewController.swift in Sources */,
+				9DE1E0522123127200843FE3 /* UIViewController + Addition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

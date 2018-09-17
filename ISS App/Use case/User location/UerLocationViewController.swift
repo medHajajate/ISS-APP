@@ -21,7 +21,8 @@ class UerLocationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupLocation() 
+        imageView.loadGif(name: "Looking")
+        setupLocation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,11 +35,13 @@ class UerLocationViewController: UIViewController {
             if let latitude =  Double(postion.latitude!), let longitude = Double(postion.longitude!) {
                 let coordinate: CLLocation = CLLocation(latitude: latitude, longitude: longitude)
                 if currentLocation.coordinate.latitude != 0, currentLocation.coordinate.longitude != 0 {
-                    if currentLocation.distance(from: coordinate) < 11000 {
-                        self.messageLabel.text = "if the ISS is above"
+                    if currentLocation.distance(from: coordinate) < 1100000 {
+                        DispatchQueue.main.async {
+                            self.messageLabel.text = "The ISS is above you"
+                            self.imageView.loadGif(name: "foundISS")
+                        }
                     }
                 }
-                
             }
         }
     }
@@ -59,9 +62,13 @@ class UerLocationViewController: UIViewController {
 extension UerLocationViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        let locValue: CLLocationCoordinate2D = (manager.location?.coordinate)! 
         currentLocation = manager.location
         NotificationCenter.default.addObserver(self, selector: #selector(compareLocation(_:)), name: NSNotification.Name("notifyUser"), object: nil)
         print("locations = \(locValue.latitude) \(locValue.longitude)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
     }
 }

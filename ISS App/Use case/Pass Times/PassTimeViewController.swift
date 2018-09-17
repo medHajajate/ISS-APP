@@ -12,19 +12,36 @@ class PassTimeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     var passTime: [PassTime] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        GPSLoaction().getGPSLocation(completion: { passTime in
-            self.passTime = passTime
-            self.tableView.reloadData()
-        })
+        tableView.tableFooterView = UIView()
+        activityIndicatorView.startAnimating()
+        loadPassTimes()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func loadPassTimes() {
+        GPSLoaction().getPassTime(completion: { passTime in
+            self.passTime = passTime
+            //DispatchQueue.main.async {
+                self.activityIndicatorView.stopAnimating()
+                self.activityIndicatorView.isHidden = true
+                self.tableView.reloadData()
+            //}
+        }, onFailure: { error in
+            self.activityIndicatorView.stopAnimating()
+            self.activityIndicatorView.isHidden = true
+            let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+            self.show(alert, sender: nil)
+        })
     }
     
 
@@ -37,8 +54,14 @@ extension PassTimeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PassengerCell", for: indexPath) as! PassengerCell
-        let duration = passTime[indexPath.row].duration
-        cell.configure(name: "\(duration)")
+        cell.configure(passTime: passTime[indexPath.row])
         return cell
+    }
+}
+
+
+extension PassTimeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

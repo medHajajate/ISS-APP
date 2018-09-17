@@ -37,9 +37,8 @@ class APIManager: NSObject {
     }
     
     
-    func getPassTime(lat: String, long: String) -> [PassTime]{
-        var passTime:  [PassTime] = []
-        let url : String = passTimeURL + "lat=\(lat)" + "LON=\(long)"
+    func getPassTime(lat: String, long: String, onSuccess: @escaping([PassTime]) -> Void, onFailure: @escaping(Error) -> Void){
+        let url : String = passTimeURL + "lat=\(lat)" + "&" + "lon=\(long)&n=10"
         let request: NSMutableURLRequest = NSMutableURLRequest(url: NSURL(string: url)! as URL)
         request.httpMethod = "GET"
         
@@ -50,13 +49,15 @@ class APIManager: NSObject {
             do {
                 let decoder = JSONDecoder()
                 let response = try decoder.decode(CALLBACK.self, from: data)
-                passTime = response.response
+                let passTime = response.response 
+                onSuccess(passTime)
+                
             } catch let err {
                 print(err.localizedDescription)
+                onFailure(err)
             }
         })
         task.resume()
-        return passTime
     }
     
     func getPassengers(onSuccess: @escaping(PassengersList) -> Void, onFailure: @escaping(Error) -> Void){
