@@ -18,7 +18,7 @@ class APIManager: NSObject {
     
     func getISSPosition(onSuccess: @escaping(ISSPostion) -> Void, onFailure: @escaping(Error) -> Void){
         let url : String = baseURL
-        let request: NSMutableURLRequest = NSMutableURLRequest(url: NSURL(string: url)! as URL)
+        var request: URLRequest = URLRequest(url: NSURL(string: url)! as URL)
         request.httpMethod = "GET"
         let session = URLSession.shared
         let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in

@@ -15,10 +15,13 @@ class GPSLoaction {
         let locManager = CLLocationManager()
         locManager.requestWhenInUseAuthorization()
         locManager.desiredAccuracy = kCLLocationAccuracyBest
+        locManager.startUpdatingLocation()
         
         if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse || CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways) {
             
-            guard let currentLocation = locManager.location else { return }
+            guard let currentLocation = locManager.location else {
+                onFailure(NSError(domain: "", code: 123456, userInfo: [NSLocalizedDescriptionKey : "error location"]))
+                return }
             
             let latitude = String(format: "%.7f", currentLocation.coordinate.latitude)
             let longitude = String(format: "%.7f", currentLocation.coordinate.longitude)
